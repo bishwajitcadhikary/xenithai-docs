@@ -1,0 +1,156 @@
+import Image from "next/image";
+
+# Requirements
+The Laravel framework has a few system requirements. You should ensure that your web server has the following minimum PHP version and extensions:
+* PHP >= 8.1
+* Ctype PHP Extension
+* cURL PHP Extension
+* DOM PHP Extension
+* Fileinfo PHP Extension
+* Filter PHP Extension
+* Hash PHP Extension
+* Mbstring PHP Extension
+* OpenSSL PHP Extension
+* PCRE PHP Extension
+* PDO PHP Extension
+* PDOMySQL PHP Extension
+* Session PHP Extension
+* Tokenizer PHP Extension
+* XML PHP Extension
+* XMLWriter PHP Extension
+* JSON PHP Extension
+* GD PHP Extension
+* Exif PHP Extension
+
+## Installation
+
+### Installation on Shared Hosting
+
+#### Video Tutorial
+<div class="bg-img">
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/HoeiUVqe6j0" title="How to install XenithAI - AI Content Writer Tools &amp; Image Generator (SaaS) on cPanel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe>
+</div>
+
+
+#### Screenshot Tutorial
+
+##### Step 1: Download & Extract
+Download the latest version of XenithAI from your CodeCanyon account and unzip it to your computer.
+1. Documentation
+2. installable.zip file
+
+<Image src={"/images/install/1.png"} width={5000} height={500} className={"bg-img"}/>
+<br/>
+<Image src={"/images/install/1-2.png"} width={5000} height={500} className={"bg-img"}/>
+
+Upload the installable.zip file to your server.
+You can also upload the installable.zip file to your server using an FTP client or File Manager.
+
+
+##### Step 2: Upload & Extract
+###### 1. Upload the installable.zip file to your server
+1. Login to your cPanel account.
+2. Click on the File Manager icon.
+3. Click on the public_html folder.
+4. Click on the Upload button.
+5. Click on the Choose File button.
+6. Select the installable file from your computer.
+<Image src={"/images/install/2.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+###### 2. Extract the installable file
+1. Click on the installable file.
+2. Click on the Extract button.
+<Image src={"/images/install/3.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+<br/>
+<Image src={"/images/install/4.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+<br/>
+<Image src={"/images/install/5.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+3. Delete the installable file.
+
+##### Step 3: Database Setup
+###### 1. Create a database
+1. Go to your cPanel account.
+2. Click on the MySQL® Database Wizard.
+<Image src={"/images/install/6.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+3. Give a name to your database.
+4. Note: Don't forget to write down your database name, username, and password. You will need them later.
+5. Click on the Next Step.
+<Image src={"/images/install/7.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+###### 2. Create a user
+1. Create a username and password for your database.
+2. Click on the Create User.
+<Image src={"/images/install/8.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+###### 3. Grant privileges
+1. Now, click on All Privileges button.
+2. Click on the Make Changes button.
+<Image src={"/images/install/9.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+###### 4. Done
+🥳🎉Congratulations! You have successfully created a database. 🎉🥳
+Note: Don't forget to write down your database name, username, and password. You will need them later.
+<Image src={"/images/install/10.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+##### Step 4: Configure .htaccess file
+Note: If you are using a apache or litespeed server, you need to configure the .htaccess file. (Skip if already configured)
+1. Go to your cPanel account.
+2. Click on the File Manager icon.
+3. Click on the public_html folder.
+4. Click on the .htaccess file.
+5. Click on the Edit button.
+6. Replace the code with the following code:
+7. Click on the Save Changes button.
+```
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ /public/$1
+    RewriteRule ^(/)?$ public/$1 [L]
+
+    # Disable Directory listing
+    Options -Indexes
+
+    # block files which needs to be hidden, specify .example extension of the file
+    <Files ~ "\.(env|json|config.js|md|gitignore|gitattributes|lock|license)$">
+        Order allow,deny
+        Deny from all
+    </Files>
+</IfModule>
+```
+<Image src={"/images/install/11.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+🥳🎉Congratulations! You have successfully configured the .htaccess file. 🎉🥳
+
+##### Step 5: Installation Wizard
+###### 1. Open your browser and go to your domain name.
+For example: [http://yourdomain.com/installer](http://yourdomain.com/installer)
+###### 2. Server Requirements
+1. Click on the `Continue ➜` button.
+<Image src={"/images/install/12.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+2. If you see the green tick mark, it means that your server meets all the requirements.
+3. Click on the `Next Step ➜` button.
+<Image src={"/images/install/13.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+###### 3. Folder Permission
+1. Click on the Check Folder Permission button.
+2. If you see the green tick mark, it means that your server meets all the requirements. <br/>
+3. Click on the `Next Step ➜` button.
+<Image src={"/images/install/14.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+###### 4. Database Setup
+1. Fill in the database details that you have created in Step 3.
+2. Click on the `Save & Continue ➜` button.
+<Image src={"/images/install/15.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+###### 5. Admin Setup
+1. Now, fill in the admin details.
+2. Click on the `Save & Continue ➜` button.
+<Image src={"/images/install/16.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+
+###### 6. Completed
+1. Click on the `Login ➜` button.
+<Image src={"/images/install/17.png"} width={1000} height={500} className={"bg-img"} alt={"image"}/>
+🥳🎉Congratulations! You have successfully installed the XenithAI.

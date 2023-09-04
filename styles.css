@@ -1,0 +1,30 @@
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.logo-light {
+    display: none; width: 200px;
+}
+.logo-dark {
+    display: none;
+    width: 200px;
+}
+.dark .logo-dark {
+    display: block;
+}
+.light .logo-light {
+    display: block;
+}
+
+.bg-img {
+    background: linear-gradient(140deg, rgb(255, 100, 50) 12.8%, rgb(255, 0, 101) 43.52%, rgb(123, 46, 255) 84.34%);
+    opacity: 1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+
+.bg-img iframe {
+    width: 100%;
+    border-radius: 10px;
+}

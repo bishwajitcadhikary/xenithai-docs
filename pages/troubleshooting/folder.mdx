@@ -1,0 +1,16 @@
+# File/Folder Permissions
+
+If you are using a Linux server, you will need to make sure that the files and folders are set to the correct permissions. The following is a list of the permissions that you will need to set:
+
+## Video Tutorial
+<div className="bg-img">
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/knP90xEkI6w" title="How to fix folder permission on XenithAI - AI Content Generator Tools (SaaS)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+</div>
+
+## Directories
+```bash
+cd cd public_html # where your public folder is
+chmod -R 775 storage/logs
+chmod -R 775 storage/framework
+chmod -R 775 bootstrap/cache
+```

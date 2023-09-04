@@ -1,0 +1,81 @@
+# OAuth - Social Login
+
+### Step 1: Go to OAuth Page
+1. Log into your Admin Panel and navigate to the "Settings" section.
+2. Click on the "OAuth" tab.
+[![image](/images/admin/settings/oauth/1.png)](/images/admin/settings/oauth/1.png)
+
+### Step 2: Enable OAuth
+1. Select the "Enable Social Login" selection box.
+2. Click on the "Save" button.
+<div className="bg-img">
+    [![image](/images/admin/settings/oauth/2.png)](/images/admin/settings/oauth/2.png)
+</div>
+
+### Step 3: Set OAuth Credentials
+#### Facebook
+1. Go to [Facebook Developers](https://developers.facebook.com/) and log in.
+2. Click on the "My Apps" button and select "Add a New App".
+3. Select "Website" as the platform.
+4. Enter a name for your app.
+5. Click on the "Create New Facebook App ID" button.
+6. Select a category for your app.
+7. Click on the "Create App ID" button.
+8. Click on the "Skip Quick Start" button.
+9. Click on the "Settings" tab.
+10. Copy the "App ID" and "App Secret" into the "Client ID" and "Client Secret" fields.
+11. Click on the "Save" button.
+* Callback URL: `https://<your-domain>/oauth/facebook/callback`
+    [![image](/images/admin/settings/oauth/3.png)](/images/admin/settings/oauth/3.png)
+
+#### Google
+1. Go to [Google Developers Console](https://console.developers.google.com/) and log in.
+2. Click on the "Create Project" button.
+3. Enter a name for your project.
+4. Click on the "Create" button.
+5. Click on the "Enable and Manage APIs" button.
+6. Click on the "Credentials" tab.
+7. Click on the "Create Credentials" button and select "OAuth client ID".
+8. Select "Web application" as the application type.
+9. Enter a name for your OAuth client.
+10. Enter the following URL into the "Authorized JavaScript origins" field: `https://<your-domain>`
+11. Enter the following URL into the "Authorized redirect URIs" field: `https://<your-domain>/oauth/google/callback`
+12. Click on the "Create" button.
+13. Copy the "Client ID" and "Client Secret" into the "Client ID" and "Client Secret" fields.
+14. Click on the "Save" button.
+[![image](/images/admin/settings/oauth/4.png)](/images/admin/settings/oauth/4.png)
+
+#### Twitter
+1. Go to [Twitter Apps](https://apps.twitter.com/) and log in.
+2. Click on the "Create New App" button.
+3. Enter a name for your app.
+4. Enter a description for your app.
+5. Enter the following URL into the "Website" field: `https://<your-domain>`
+6. Enter the following URL into the "Callback URL" field: `https://<your-domain>/oauth/twitter/callback`
+7. Click on the "Create your Twitter application" button.
+8. Click on the "Keys and Access Tokens" tab.
+9. Click on the "Create my access token" button.
+10. Copy the "Consumer Key (API Key)" and "Consumer Secret (API Secret)" into the "Client ID" and "Client Secret" fields.
+11. Click on the "Save" button.
+[![image](/images/admin/settings/oauth/5.png)](/images/admin/settings/oauth/5.png)
+
+#### LinkedIn
+1. Go to [LinkedIn Developers](https://www.linkedin.com/developer/apps) and log in.
+2. Click on the "Create Application" button.
+3. Enter a name for your app.
+4. Enter a description for your app.
+5. Enter the following URL into the "Website URL" field: `https://<your-domain>`
+6. Enter the following URL into the "OAuth 2.0 Redirect URLs" field: `https://<your-domain>/oauth/linkedin/callback`
+7. Click on the "Submit" button.
+8. Copy the "Client ID" and "Client Secret" into the "Client ID" and "Client Secret" fields.
+9. Click on the "Save" button.
+[![image](/images/admin/settings/oauth/6.png)](/images/admin/settings/oauth/6.png)
+
+## Step 4: Test OAuth
+1. Log out of your Admin Panel or open a new incognito window.
+2. Click on the "Login" button or navigate to the "Login" page.
+3. Click on the "Login with Facebook" button.
+4. Click on the "Login with Google" button.
+5. Click on the "Login with Twitter" button.
+6. Click on the "Login with LinkedIn" button.
+[![image](/images/admin/settings/oauth/7.png)](/images/admin/settings/oauth/7.png)

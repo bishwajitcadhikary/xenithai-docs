@@ -1,0 +1,9 @@
+{
+  "openapi": "Open AI",
+  "stabilityai": "Stability AI",
+  "rapidapi": "Rapid API",
+  "configuration": "AI Settings",
+  "categories": "Template Categories",
+  "templates": "Templates",
+  "bots": "Chat Bots"
+}
