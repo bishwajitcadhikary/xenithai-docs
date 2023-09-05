@@ -2,11 +2,10 @@
   "general": "General",
   "languages": "Languages",
   "file-disks": "File Disks",
-  "smtp": "SMTP",
+  "smtp": "Email Configuration",
   "email-templates": "Email Templates",
   "oauth": "OAuth - Social Login",
   "roles": "Roles",
   "backups": "Backups",
-  "cron-jobs": "Cron Jobs",
-  "upgrade": "Upgrade"
+  "cron-jobs": "Cron Jobs"
 }
