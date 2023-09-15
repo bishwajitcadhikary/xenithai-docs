@@ -2,16 +2,16 @@ img {
     max-width: 100%;
     border-radius: 10px;
 }
-.logo-light {
-    display: none; width: 200px;
-}
-.logo-dark {
+
+.logo-dark, .logo-light {
     display: none;
-    width: 200px;
+    width: 130px;
 }
+
 .dark .logo-dark {
     display: block;
 }
+
 .light .logo-light {
     display: block;
 }

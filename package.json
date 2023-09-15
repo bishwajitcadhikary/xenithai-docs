@@ -1,7 +1,9 @@
 {
+
   "scripts": {
     "dev": "next",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "offline": "next build && node offline.js -d out"
   },
   "dependencies": {
     "next": "^13.4.11",
@@ -9,5 +11,13 @@
     "nextra-theme-docs": "^2.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "argparse": "^2.0.1",
+    "cheerio": "^1.0.0-rc.10",
+    "css": "^3.0.0",
+    "is-absolute-url": "^3.0.3",
+    "is-url": "^1.2.4",
+    "walk": "^2.3.14"
   }
 }
