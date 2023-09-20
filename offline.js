@@ -144,28 +144,37 @@ function offlineHtmlFile(fileName) {
             $(element).attr("src", relativeValue);
         }
     });
-    //
-    // // Remove preload and prefetch
-    // $("link").each((index, element) => {
-    //     const relAttributeValue = $(element).attr("rel");
-    //     if (relAttributeValue === "preload" || relAttributeValue === "prefetch") {
-    //         // remove preload and prefetch
-    //         $(element).remove();
-    //     }
-    // })
-    //
-    // // Remove <script> tags with src
-    // $("script").each((index, element) => {
-    //     const attributeValue = $(element).attr("src");
-    //     if (isBlank(attributeValue)) {
-    //         return;
-    //     }
-    //     $(element).remove();
-    // })
-    //
-    // // Remove theme switcher
-    // $("button[title='Change theme']").parent().parent().remove();
-    // $("div.nextra-search").remove();
+
+    // Remove preload and prefetch
+    $("link").each((index, element) => {
+        const relAttributeValue = $(element).attr("rel");
+        if (relAttributeValue === "preload" || relAttributeValue === "prefetch") {
+            // remove preload and prefetch
+            $(element).remove();
+        }
+    })
+
+    // Remove <script> tags with src
+    $("script").each((index, element) => {
+        const attributeValue = $(element).attr("src");
+        if (isBlank(attributeValue)) {
+            return;
+        }
+        $(element).remove();
+    })
+
+    // Remove theme switcher
+    $("button[title='Change theme']").parent().parent().remove();
+    $("div.nextra-search").remove();
+
+    // Remove Dropdown Icon
+    $(".nextra-sidebar-container button svg").remove();
+
+    // Remove Mobile Menu Button
+    $(".nextra-nav-container .nextra-hamburger").remove();
+
+    // Add alert
+    $('body').prepend('<div class="alert-warning">For better experience, please use desktop mode.</div>')
 
     const transformedHtml = $.html();
     fs.writeFileSync(fileName, transformedHtml, "utf-8");

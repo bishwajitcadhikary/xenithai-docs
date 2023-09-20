@@ -28,7 +28,7 @@ export default {
     ),
     footer: {
         text: <span>
-            Copyright © {new Date().getFullYear()} Theme-life. All Rights Reserved.
+            Copyright © {new Date().getFullYear()} Riktheme. All Rights Reserved.
         </span>,
     },
     sidebar: {

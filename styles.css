@@ -28,3 +28,19 @@ img {
     width: 100%;
     border-radius: 10px;
 }
+
+.alert-warning {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .alert-warning {
+        display: block;
+        background-color: #339900;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+}
